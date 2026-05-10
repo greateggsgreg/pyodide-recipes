@@ -35,8 +35,7 @@ build:
         --cross-compile-prefix= \
         CC=emcc AR=emar RANLIB=emranlib \
         --prefix="${OPENSSL_PREFIX}"
-      emmake make -j ${PYODIDE_JOBS:-3} build_libs
-      emmake make install_dev
+      emmake make -j ${PYODIDE_JOBS:-3} install_dev
       popd
     fi
 
