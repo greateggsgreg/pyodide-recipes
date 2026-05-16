@@ -27,6 +27,7 @@ def test_jsonschema_validate_ok(selenium):
 @run_in_pyodide(packages=["jsonschema"])
 def test_jsonschema_validate_raises(selenium):
     import jsonschema
+    import pytest
 
     schema = {"type": "integer", "minimum": 0}
     with pytest.raises(jsonschema.ValidationError):
